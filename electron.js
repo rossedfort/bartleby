@@ -1,12 +1,13 @@
-/* jshint node: true */
 'use strict';
 
 const electron         = require('electron');
+const FileBin          = require('file-bin');
 const app              = electron.app;
 const BrowserWindow    = electron.BrowserWindow;
 const emberAppLocation = `file://${__dirname}/dist/index.html`;
 
 let mainWindow = null;
+let filesystem = new FileBin(__dirname + '/notes', ['.txt', '.md', '.markdown']);
 
 electron.crashReporter.start();
 
@@ -24,19 +25,8 @@ app.on('ready', function onReady() {
 
     delete mainWindow.module;
 
-    // If you want to open up dev tools programmatically, call
-    // mainWindow.openDevTools();
-
-    // By default, we'll open the Ember App by directly going to the
-    // file system.
-    //
-    // Please ensure that you have set the locationType option in the
-    // config/environment.js file to 'hash'. For more information,
-    // please consult the ember-electron readme.
     mainWindow.loadURL(emberAppLocation);
 
-    // If a loading operation goes wrong, we'll send Electron back to
-    // Ember App entry point
     mainWindow.webContents.on('did-fail-load', () => {
         mainWindow.loadURL(emberAppLocation);
     });
@@ -45,3 +35,5 @@ app.on('ready', function onReady() {
         mainWindow = null;
     });
 });
+
+exports.filesystem = filesystem;
