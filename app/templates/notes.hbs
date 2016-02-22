@@ -1,3 +1,8 @@
+<div class="new-note">
+  {{input type='text' value=newNoteId placeholder='New Note Id'}}
+  {{input type='text' value=newNoteContents placeholder='New Note Contents'}}
+  <button {{action 'createNewNote'}}>Create New Note</button>
+</div>
 <div class="sidebar">
   {{#each model as |note|}}
   {{#link-to 'notes.note' note }}

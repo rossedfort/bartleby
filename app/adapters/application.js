@@ -12,5 +12,9 @@ export default DS.Adapter.extend({
 
   findRecord() {
     return filesystem.find();
+  },
+
+  createRecord(store, type, record) {
+    return filesystem.write(record.id, record.attributes().content);
   }
 });
