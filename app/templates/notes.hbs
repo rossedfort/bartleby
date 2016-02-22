@@ -1,5 +1,5 @@
 <div class="new-note">
-  {{input type='text' value=newNoteId placeholder='New Note Id'}}
+  {{input type='text' value=newNoteId placeholder='New Note File Name'}}
   {{input type='text' value=newNoteContents placeholder='New Note Contents'}}
   <button {{action 'createNewNote'}}>Create New Note</button>
 </div>
@@ -8,7 +8,6 @@
   {{#link-to 'notes.note' note }}
     <div class="note-list-item">
       <h3>{{note.id}}</h3>
-      <p>{{note.content}}</p>
     </div>
   {{/link-to}}
   {{/each}}

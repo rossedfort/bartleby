@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   newNoteId: null,
   newNoteContents: null,
   actions: {
-    createNewNote: function() {
+    createNewNote() {
       this.store.createRecord('note', {
         id: this.get('newNoteId'),
         content: this.get('newNoteContents')

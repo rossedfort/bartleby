@@ -13,3 +13,8 @@
 .note-list-item {
   border-bottom: 1px solid #ccc;
 }
+
+.new-note {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
