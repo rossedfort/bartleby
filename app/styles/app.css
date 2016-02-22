@@ -1,0 +1,15 @@
+.sidebar {
+  width: 25%;
+  float: left;
+  border-right: 1px solid #ccc;
+}
+
+.note-body {
+  width: 70%;
+  padding: 20px;
+  float: left;
+}
+
+.note-list-item {
+  border-bottom: 1px solid #ccc;
+}

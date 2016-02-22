@@ -1,6 +1,13 @@
-{{#each model as |note|}}
-<div class="note-list-item">
-  <h3>{{note.id}}</h3>
-  <p>{{note.content}}</p>
+<div class="sidebar">
+  {{#each model as |note|}}
+  {{#link-to 'notes.note' note }}
+    <div class="note-list-item">
+      <h3>{{note.id}}</h3>
+      <p>{{note.content}}</p>
+    </div>
+  {{/link-to}}
+  {{/each}}
 </div>
-{{/each}}
+<div class="note-body">
+  {{outlet}}
+</div>

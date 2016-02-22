@@ -8,5 +8,9 @@ const filesystem = mainProcess.filesystem;
 export default DS.Adapter.extend({
   findAll() {
     return filesystem.all();
+  },
+
+  findRecord() {
+    return filesystem.find();
   }
 });
