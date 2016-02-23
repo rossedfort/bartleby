@@ -94,12 +94,9 @@ nav input {
 }
 
 #save {
+  margin-top: 10px;
   display: inline-block;
   float: right;
-  font-size: 16px;
-  border: 1px solid red;
-  background-color: #fff;
-  padding: 5px 20px;
 }
 
 .note-list-item {

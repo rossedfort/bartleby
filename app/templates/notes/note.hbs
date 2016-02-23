@@ -1,7 +1,7 @@
 <div class="note-body">
   <div class="note-details">
     <h3>{{model.id}}</h3>
-    {{#if model.hasDirtyAttributes}} <button id='save' {{action 'saveNote'}}> Save</button>{{/if}}
+    {{#if model.hasDirtyAttributes}} <button class="btn btn-default" id="save" {{action 'saveNote'}}> Save</button>{{/if}}
   </div>
   <div class="rendered">
     {{markdown model.content}}
