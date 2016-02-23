@@ -17,5 +17,10 @@ export default DS.Adapter.extend({
   createRecord(store, type, record) {
     let data = this.serialize(record, { includeId: true});
     return filesystem.write(data.id, data.content);
+  },
+
+  updateRecord(store, type, record) {
+    let data = this.serialize(record, { includeId: true});
+    return filesystem.write(data.id, data.content);
   }
 });

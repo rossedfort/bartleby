@@ -1,4 +1,9 @@
 <div class="note-body">
   <h3>{{model.id}}</h3>
-  <p>{{model.content}}</p>
+  <div class="rendered">
+    {{markdown model.content}}
+  </div>
+  {{textarea value=model.content}}
+
+  {{#if model.hasDirtyAttributes}} <button {{action 'saveNote'}}> Save</button>{{/if}}
 </div>
