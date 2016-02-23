@@ -5,7 +5,7 @@
       {{#each model as |note|}}
       {{#link-to 'notes.note' note }}
       <li class="note-list-item">
-        {{note.id}}
+        {{fa-icon 'file-text-o'}} {{note.id}}
       </li>
       {{/link-to}}
       {{/each}}
