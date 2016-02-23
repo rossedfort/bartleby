@@ -1,0 +1,8 @@
+<div class="note-body">
+  <h3>New Note</h3>
+  <div class="new-note">
+    {{input type='text' value=newNoteId placeholder='New Note File Name'}}
+    {{textarea value=newNoteContents placeholder='New Note Contents'}}
+    <button {{action 'createNewNote'}}>Create New Note</button>
+  </div>
+</div>

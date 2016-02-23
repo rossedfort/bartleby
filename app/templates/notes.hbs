@@ -1,17 +1,17 @@
-<div class="new-note">
-  {{input type='text' value=newNoteId placeholder='New Note File Name'}}
-  {{input type='text' value=newNoteContents placeholder='New Note Contents'}}
-  <button {{action 'createNewNote'}}>Create New Note</button>
-</div>
-<div class="sidebar">
-  {{#each model as |note|}}
-  {{#link-to 'notes.note' note }}
-    <div class="note-list-item">
-      <h3>{{note.id}}</h3>
-    </div>
-  {{/link-to}}
-  {{/each}}
-</div>
-<div class="note-body">
-  {{outlet}}
+<div class="container">
+  <div class="sidebar">
+    <h5>Notes</h5>
+    <ul class="note-list">
+      {{#each model as |note|}}
+      {{#link-to 'notes.note' note }}
+      <li class="note-list-item">
+        {{fa-icon 'file-text-o'}} {{note.id}}
+      </li>
+      {{/link-to}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="main">
+    {{outlet}}
+  </div>
 </div>

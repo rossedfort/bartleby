@@ -1,3 +1,10 @@
-<h2 id="title">Bartleby</h2>
+<nav>
+  <ul class='navbar'>
+    {{#link-to 'notes.new'}}
+      <li>{{fa-icon 'plus'}} New Note</li>
+    {{/link-to}}
+  </ul>
+  {{input type='text' value=searchbar placeholder='Search'}}
+</nav>
 
 {{outlet}}

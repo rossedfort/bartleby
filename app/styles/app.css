@@ -1,17 +1,102 @@
+.ember-application {
+  width: 100%;
+  position: fixed;
+  margin-top: 25px;
+  background-color: rgba(220, 220, 220, 1);;
+}
+
+html {
+  font-family: 'BlinkMacSystemFont';
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+nav ul.navbar {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.navbar li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul.navbar a li {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 7px;
+  padding: 5px 10px;;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+nav ul.navbar a li i {
+  color: #666;
+}
+
+nav input {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 7px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: right;
+  width: 25%;
+}
+
+.container {
+  border-top: 1px solid #999;
+}
+
 .sidebar {
   width: 25%;
+  height: 100vh;
   float: left;
+  background-color: #eee;
   border-right: 1px solid #ccc;
+}
+
+.sidebar h5 {
+  margin: 10px 0 3px 7px;
+  padding: 0;
+  color: #777;
 }
 
 .note-body {
   width: 70%;
-  padding: 20px;
+  padding: 10px 15px;
   float: left;
 }
 
-.note-list-item {
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.note-body h3 {
+  padding: 0 5px;
+  font-size: 20px;
+  font-weight: 400;
   border-bottom: 1px solid #ccc;
+}
+
+.note-list-item {
+  list-style-type: none;
+  padding: 5px 5px 5px 15px;
+  margin: 0 0;
+  border-bottom: 1px solid #ddd;
+}
+
+a.active .note-list-item {
+  background-color: #ccc;
 }
 
 .new-note {
@@ -19,7 +104,23 @@
   padding-bottom: 15px;
 }
 
+.new-note input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.new-note textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 300px;
+}
+
+.note-list {
+  margin: 0;
+  padding: 0;
+}
+
 .note-list-item, a {
   text-decoration: none;
-  color: #000;
+  color: #333;
 }
