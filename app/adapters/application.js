@@ -22,5 +22,10 @@ export default DS.Adapter.extend({
   updateRecord(store, type, record) {
     let data = this.serialize(record, { includeId: true});
     return filesystem.write(data.id, data.content);
+  },
+
+  deleteRecord(store, type, record) {
+    let data = this.serialize(record, { includeId: true});
+    return filesystem.destroy(data.id).then(() => { return { id: data.id } })
   }
 });

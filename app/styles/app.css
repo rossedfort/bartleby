@@ -18,6 +18,7 @@ body {
 }
 
 nav ul.navbar {
+  width: 100%;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -64,7 +65,7 @@ nav input {
 }
 
 .sidebar {
-  width: 25%;
+  width: 20%;
   min-height: 100vh;
   float: left;
   background-color: #eee;
@@ -81,7 +82,7 @@ nav input {
   background-color: #fff;
   box-sizing: border-box;
   width: 100%;
-  padding: 10px 15px;
+  padding: 25px 35px;
   float: left;
 }
 
@@ -101,7 +102,7 @@ nav input {
 
 .note-details {
   border-bottom: 1px solid #ccc;
-  margin: 10px 10px 0 10px;
+  margin: 10px 50px 0px 10px;
 }
 
 #save {
@@ -150,9 +151,17 @@ a.active .note-list-item {
   color: #333;
 }
 
+.delete-button {
+  float: right;
+  border: none;
+  background-color: inherit;
+  display: inline-block;
+}
+
+
 .rendered {
   box-sizing: border-box;
-  padding-right: 20px;
+  padding-right: 50px;
   float: left;
 }
 

@@ -82,6 +82,6 @@
     }
   },
   "dependencies": {
-    "file-bin": "^0.2.0"
+    "file-bin": "^0.4.0"
   }
 }
