@@ -1,12 +1,16 @@
 .ember-application {
   width: 100%;
   margin-top: 25px;
-  background-color: rgba(220, 220, 220, 1);;
+  background-color: rgba(220, 220, 220, 1);
+}
+
+.ember-view {
 }
 
 html {
   font-family: 'BlinkMacSystemFont';
   font-size: 14px;
+  overflow: hidden;
 }
 
 body {
@@ -28,8 +32,8 @@ nav ul.navbar a li {
   display: inline-block;
   font-size: 12px;
   font-weight: 400;
-  margin: 7px;
-  padding: 5px 10px;;
+  margin: 7px 0px 7px 7px;
+  padding: 5px 10px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -54,9 +58,14 @@ nav input {
   border-top: 1px solid #999;
 }
 
+.scrollable {
+  overflow-y: scroll;
+  height: 94vh;
+}
+
 .sidebar {
   width: 25%;
-  height: 100vh;
+  min-height: 100vh;
   float: left;
   background-color: #eee;
   border-right: 1px solid #ccc;
@@ -69,14 +78,16 @@ nav input {
 }
 
 .note-body {
-  width: 70%;
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 100%;
   padding: 10px 15px;
   float: left;
 }
 
 .main {
+  box-sizing: border-box;
   width: 100%;
-  height: 100vh;
   background-color: #fff;
 }
 
@@ -90,7 +101,7 @@ nav input {
 
 .note-details {
   border-bottom: 1px solid #ccc;
-  margin: 10px;
+  margin: 10px 10px 0 10px;
 }
 
 #save {
@@ -115,7 +126,7 @@ a.active .note-list-item {
 
 .new-note {
   border-bottom: 1px solid #ccc;
-  padding-bottom: 15px;
+  padding: 30px;
 }
 
 .new-note input {
@@ -140,18 +151,53 @@ a.active .note-list-item {
 }
 
 .rendered {
+  box-sizing: border-box;
+  padding-right: 20px;
   float: left;
+}
+
+.rendered img {
+  max-width: 100%;
+}
+
+.stats {
+  width: 100%;
+  text-align: right;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: #666;
+}
+
+.rendered .stats span {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.half {
   width: 50%;
 }
 
+.spacer {
+  height: 100px;
+}
+
+.index {
+  padding: 25px;
+}
+
 .markdown {
+  display: none;
   width: 50%;
   float: left;
 }
 
 .markdown textarea {
-  width: 100%;
-  height: 80vh;
+  background-color: rgb(40, 45, 50);
+  outline: none;
+  color: #fff;
+  width: 95%;
+  height: 100vh;
   padding: 20px;
   border: none;
 }
