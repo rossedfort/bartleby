@@ -21,6 +21,8 @@ app.on('ready', function onReady() {
     mainWindow = new BrowserWindow({
         width: 1200,
         height: 800,
+        minWidth: 640,
+        minHeight: 420,
         titleBarStyle: 'hidden-inset',
         title: 'Bartleby',
         defaultFontFamily: 'menu'

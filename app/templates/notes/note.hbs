@@ -1,12 +1,16 @@
-<div class="note-body">
-  <div class="note-details">
-    <h3>{{model.id}}</h3>
-    {{#if model.hasDirtyAttributes}} <button id='save' {{action 'saveNote'}}> Save</button>{{/if}}
-  </div>
-  <div class="rendered">
-    {{markdown model.content}}
-  </div>
-  <div class="markdown">
-    {{textarea value=model.content}}
+<div class="scrollable">
+  <div class="note-body">
+    <div class="note-details">
+      <h3>{{model.id}}</h3>
+      {{#if model.hasDirtyAttributes}} <button id='save' {{action 'saveNote'}}> Save</button>{{/if}}
+    </div>
+    <div class="rendered">
+      <p>Character count: {{charCount}}</p>
+      <p>Word count: {{wordCount}}</p>
+      {{markdown model.content}}
+    </div>
+    <div class="markdown">
+      {{textarea value=model.content}}
+    </div>
   </div>
 </div>
