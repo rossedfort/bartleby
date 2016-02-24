@@ -1,15 +1,7 @@
+{{nav-bar notes=model}}
 <div class="container">
   <div class="sidebar">
-    <h5>Notes</h5>
-    <ul class="note-list">
-      {{#each model as |note|}}
-      {{#link-to 'notes.note' note }}
-      <li class="note-list-item">
-        {{fa-icon 'file-text-o'}} {{note.id}}
-      </li>
-      {{/link-to}}
-      {{/each}}
-    </ul>
+    {{note-list notes=model}}
   </div>
   <div class="main">
     {{outlet}}
