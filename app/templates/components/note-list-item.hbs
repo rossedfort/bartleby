@@ -1,5 +1,4 @@
-{{#link-to 'notes.note' note }}
 <li class="note-list-item">
-  {{fa-icon 'file-text-o'}} {{note.id}}
+  {{#link-to 'notes.note' note }}{{fa-icon 'file-text-o'}} {{truncatedNoteName}} {{/link-to}}
+  <button {{action 'delete' note}} class='delete-button' type="button" name="delete-button">{{fa-icon 'times'}}</button>
 </li>
-{{/link-to}}
