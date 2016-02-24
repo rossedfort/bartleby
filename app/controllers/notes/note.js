@@ -1,17 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  charCount: Ember.computed('content', function(){
-    return this.get('model.content').split(" ").join("").length;
-  }),
-
-  wordCount: Ember.computed('content', function(){
-    return this.get('model.content').split(" ").length;
-  }),
+  editing: false,
 
   actions: {
     saveNote() {
       this.get('model').save();
+      Ember.$('.rendered').toggleClass('half');
+      Ember.$('.markdown').toggle();
     }
   }
 });
