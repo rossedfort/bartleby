@@ -5,8 +5,10 @@
       {{#if model.hasDirtyAttributes}} <button id='save' {{action 'saveNote'}}> Save</button>{{/if}}
     </div>
     <div class="rendered">
-      <p>Character count: {{charCount}}</p>
-      <p>Word count: {{wordCount}}</p>
+      <div class="stats">
+        <span>Character count:</span> {{charCount}}
+        <span>Word count:</span> {{wordCount}}
+      </div>
       {{markdown model.content}}
       <div class='spacer'></div>
     </div>
