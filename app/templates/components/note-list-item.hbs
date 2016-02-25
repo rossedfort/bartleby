@@ -1,4 +1,5 @@
 <li class="note-list-item">
   {{#link-to 'notes.note' note }}{{fa-icon 'file-text-o'}} {{truncatedNoteName}} {{/link-to}}
   <button {{action 'delete' note}} class='delete-button' type="button" name="delete-button">{{fa-icon 'times'}}</button>
+  <button {{action 'postGist' note}} class='delete-button' type="button" name="button">{{fa-icon 'cloud-upload'}}</button>
 </li>
