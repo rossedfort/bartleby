@@ -18,8 +18,8 @@ export default Ember.Component.extend({
       let id = note.get('id');
       let content = note.get('content');
       let files = {};
-      files[id] = {'content': content}
-      $.ajax({
+      files[id] = {'content': content};
+      Ember.$.ajax({
         url: 'https://api.github.com/gists',
         type: 'POST',
         dataType: 'json',
