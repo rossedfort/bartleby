@@ -7,7 +7,6 @@ const BrowserWindow    = electron.BrowserWindow;
 const emberAppLocation = `file://${__dirname}/dist/index.html`;
 const apiRequests      = require('superagent')
 
-let githubtoken = null;
 let mainWindow = null;
 let filesystem = new FileBin(__dirname + '/notes', ['.txt', '.md', '.markdown']);
 
@@ -105,8 +104,8 @@ function requestGithubToken(options, code) {
     })
     .end(function (err, response) {
       if (response && response.ok) {
-        githubtoken = response.body.access_token;
-        console.log(response.body.access_token);
+        let githubtoken = response.body.access_token;
+        // console.log(response.body.access_token);
         mainWindow.webContents.send('new-github-token', githubtoken);
       } else {
         console.log(err);
@@ -118,4 +117,3 @@ function requestGithubToken(options, code) {
 
 exports.filesystem = filesystem;
 exports.githubLogin = githubLogin;
-exports.githubtoken = githubtoken;
