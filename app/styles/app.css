@@ -106,12 +106,13 @@ nav input {
 }
 
 #save {
-  display: inline-block;
   float: right;
-  font-size: 16px;
-  border: 1px solid red;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px 10px;
   background-color: #fff;
-  padding: 5px 20px;
+  border: 1px solid #f06d06;
+  border-radius: 5px;
 }
 
 .note-list-item {
@@ -171,7 +172,6 @@ a.active .note-list-item {
 
 .stats {
   width: 100%;
-  text-align: right;
   display: block;
   margin-bottom: 10px;
   font-size: 11px;
@@ -209,4 +209,10 @@ a.active .note-list-item {
   height: 100vh;
   padding: 20px;
   border: none;
+}
+
+.searchbar {
+  margin: 10px;
+  width: 90%;
+  height: 20px;
 }
