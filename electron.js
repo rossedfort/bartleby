@@ -1,11 +1,14 @@
 'use strict';
 
 const electron         = require('electron');
+const nativeImage      = electron.nativeImage;
 const FileBin          = require('file-bin');
 const app              = electron.app;
 const BrowserWindow    = electron.BrowserWindow;
 const emberAppLocation = `file://${__dirname}/dist/index.html`;
-
+var icon = nativeImage.createFromPath(`${__dirname}/public/bartleby-icon.icns`);
+app.dock.setIcon(icon);
+console.log(icon)
 let mainWindow = null;
 let filesystem = new FileBin(__dirname + '/notes', ['.txt', '.md', '.markdown']);
 

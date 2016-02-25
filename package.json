@@ -20,7 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
-    "electron-packager": "5.2.1",
+    "electron-packager": "^5.2.1",
     "electron-prebuilt": "0.36.8",
     "ember-ajax": "0.7.1",
     "ember-cli": "2.3.0",
@@ -82,6 +82,7 @@
     }
   },
   "dependencies": {
+    "electron-packager": "^5.2.1",
     "file-bin": "^0.4.0"
   }
 }
