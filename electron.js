@@ -5,9 +5,13 @@ const FileBin          = require('file-bin');
 const app              = electron.app;
 const BrowserWindow    = electron.BrowserWindow;
 const emberAppLocation = `file://${__dirname}/dist/index.html`;
+const fs               = require('fs');
+const notesDir         = app.getPath('home') + '/Documents/Notes';
 
 let mainWindow = null;
-let filesystem = new FileBin(__dirname + '/notes', ['.txt', '.md', '.markdown']);
+
+if (!fs.existsSync(notesDir)) { fs.mkdir(notesDir); }
+let filesystem = new FileBin(notesDir, ['.txt', '.md', '.markdown']);
 
 electron.crashReporter.start();
 
