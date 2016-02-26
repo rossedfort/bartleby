@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   username: null,
   password: null,
-  token: null,
 
   actions: {
     login() {
@@ -19,7 +18,6 @@ export default Ember.Controller.extend({
       }).done((response) => {
         this.set('username', null);
         this.set('password', null);
-        this.set('token', response.token);
         localStorage.setItem('token', response.token);
         console.log(response);
       });
