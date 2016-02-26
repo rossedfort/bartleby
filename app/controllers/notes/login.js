@@ -20,6 +20,7 @@ export default Ember.Controller.extend({
         this.set('password', null);
         localStorage.setItem('token', response.token);
         console.log(response);
+        this.transitionToRoute('notes');
       });
     }
   }
