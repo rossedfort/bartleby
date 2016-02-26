@@ -1,7 +1,10 @@
-<h5>Notes</h5>
-{{input type="text" value=searchTerm placeholder="Search Notes…" class='searchbar'}}
-<ul class="note-list">
-  {{#each availableNotes as |note|}}
+<div class="scrollable">
+  {{input type="text" value=searchTerm placeholder="Search Notes…" class='searchbar'}}
+  <h5>Notes</h5>
+  <ul class="note-list">
+    {{#each availableNotes as |note|}}
     {{note-list-item note=note}}
-  {{/each}}
-</ul>
+    {{/each}}
+  </ul>
+  <div class="spacer"></div>
+</div>
