@@ -216,3 +216,51 @@ a.active .note-list-item {
   width: 90%;
   height: 20px;
 }
+
+.login {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin: 50px auto;
+  padding: 35px;
+}
+
+.login input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 3px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login label {
+  font-size: 12px;
+  color: #666;
+}
+
+.login button {
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.login button:hover {
+  background-color: rgb(118, 204, 69);
+}
+
+.octicon {
+  margin: 50px auto 20px auto;
+  display: block;
+  text-align: center;
+}
+
+.octicon h3 {
+  margin-top: 20px;
+  font-weight: 200;
+}

@@ -13,29 +13,29 @@ export default Ember.Component.extend({
     },
 
     postGist(note) {
-      let id = note.get('id');
-      let content = note.get('content');
-      let files = {};
-      files[id] = {'content': content};
-      $.ajax({
-          url: 'https://api.github.com/gists',
-          type: 'POST',
-          beforeSend: function(xhr) {
-              xhr.setRequestHeader("Authorization", "token TOKEN-FROM-AUTHORIZATION-CALL");
-          },
-          data: '{"description": "a gist for a user with token api call via ajax","public": true,"files": {"file1.txt": {"content": "String file contents via ajax"}}}'
-      }).done(function(response) {
-          console.log(response);
-      });
-      // Ember.$.ajax({
-      //   url: 'https://api.github.com/gists',
-      //   type: 'POST',
-      //   dataType: 'json',
-      //   data: JSON.stringify({'files': files, 'public': true})
-      // })
-      // .success( function(e) {
-      //   shell.openExternal(e.html_url);
-      // });
+      if (localStorage.token) {
+        let id = note.get('id');
+        let content = note.get('content');
+        let files = {};
+        files[id] = {'content': content};
+        uploadGist(files);
+      } else {
+        alert('Please login to Github');
+      }
     }
   }
 });
+
+const uploadGist = (files) => {
+  Ember.$.ajax({
+    url: 'https://api.github.com/gists',
+    type: 'POST',
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("Authorization", `token ${localStorage.token}`);
+    },
+    data: JSON.stringify({'files': files, 'public': true})
+  }).done(function(response) {
+    shell.openExternal(response.html_url);
+    console.log(response);
+  });
+};
