@@ -21,6 +21,9 @@ export default Ember.Controller.extend({
         localStorage.setItem('token', response.token);
         console.log(response);
         this.transitionToRoute('notes');
+      }).error((response) => {
+        Ember.$('.login').css('border', '1px solid red');
+        console.log(response);
       });
     }
   }
