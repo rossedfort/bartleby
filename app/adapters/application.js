@@ -10,8 +10,8 @@ export default DS.Adapter.extend({
     return filesystem.all();
   },
 
-  findRecord() {
-    return filesystem.find();
+  findRecord(store, type, id, record) {
+    return filesystem.find(id);
   },
 
   createRecord(store, type, record) {
@@ -26,6 +26,6 @@ export default DS.Adapter.extend({
 
   deleteRecord(store, type, record) {
     let data = this.serialize(record, { includeId: true});
-    return filesystem.destroy(data.id).then(() => { return { id: data.id } })
+    return filesystem.destroy(data.id).then(() => { return { id: data.id }; });
   }
 });
