@@ -85,6 +85,7 @@
     "apirequests": "0.0.13",
     "event-emitter": "^0.3.4",
     "file-bin": "^0.4.0",
+    "marked": "^0.3.5",
     "request": "^2.69.0",
     "superagent": "^1.7.2"
   }
