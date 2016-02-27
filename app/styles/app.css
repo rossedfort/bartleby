@@ -130,7 +130,7 @@ nav input {
   border-bottom: 1px solid #ddd;
 }
 
-a.active .note-list-item {
+.active {
   background-color: #ccc;
 }
 
