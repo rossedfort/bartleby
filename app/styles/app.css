@@ -15,6 +15,7 @@ html {
 
 body {
   margin: 0;
+  box-sizing: border-box;
 }
 
 nav ul.navbar {
@@ -67,6 +68,7 @@ nav input {
 .sidebar {
   width: 20%;
   min-height: 100vh;
+  min-width: 205px;
   float: left;
   background-color: #eee;
   border-right: 1px solid #ccc;
