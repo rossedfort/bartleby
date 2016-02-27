@@ -12,7 +12,7 @@ const Tray             = electron.Tray;
 const notesDir         = app.getPath('home') + '/Documents/Notes';
 
 let mainWindow = null;
-let appIcon    = null;
+var appIcon    = null;
 
 if (!fs.existsSync(notesDir)) { fs.mkdir(notesDir); }
 let filesystem = new FileBin(notesDir, ['.txt', '.md', '.markdown']);
@@ -38,8 +38,9 @@ app.on('ready', function onReady() {
     delete mainWindow.module;
 
     mainWindow.loadURL(emberAppLocation);
-    appIcon = new Tray('./public/bartleby-tray-icon.png');
-    
+
+    appIcon = new Tray('public/bartleby-tray-icon.png');
+
     mainWindow.webContents.on('did-fail-load', () => {
         mainWindow.loadURL(emberAppLocation);
     });
@@ -49,8 +50,7 @@ app.on('ready', function onReady() {
     });
 });
 
-exports.filesystem = filesystem;
-const updateMenu = exports.updateMenu = (notes) => {
+const updateMenu = (notes) => {
   let noteMenuItems = notes.map(note => {
     return { label: note.id, click: function() {
       mainWindow.webContents.send('note-selected', note.id);
@@ -60,3 +60,7 @@ const updateMenu = exports.updateMenu = (notes) => {
   let contextMenu = Menu.buildFromTemplate(noteMenuItems);
   appIcon.setContextMenu(contextMenu);
 };
+
+
+exports.filesystem = filesystem;
+exports.updateMenu = updateMenu;
