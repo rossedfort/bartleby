@@ -1,7 +1,7 @@
 <div class="scrollable">
   <div class="note-body">
     <div class="note-details">
-      <h3>{{model.id}}</h3>
+      <h3>{{model.id}} <small> {{formattedDate}}</small></h3>
       {{#if model.hasDirtyAttributes}} <button id='save' {{action 'saveNote'}}> Save</button>{{/if}}
     </div>
     <div class="rendered">

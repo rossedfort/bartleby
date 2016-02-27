@@ -96,15 +96,21 @@ nav input {
 
 .note-body h3 {
   margin: 0px;
-  padding: 5px 10px;
+  padding: 5px 0px;
   font-size: 20px;
   font-weight: 400;
   display: inline-block;
 }
 
+.note-body h3 small {
+  font-size: 0.6em;
+  font-weight: 200;
+  colot: #666;
+}
+
 .note-details {
   border-bottom: 1px solid #ccc;
-  margin: 10px 50px 0px 10px;
+  margin: 10px 50px 0px 0px;
 }
 
 #save {
@@ -180,8 +186,17 @@ a.active .note-list-item {
   color: #666;
 }
 
-.rendered .stats span {
-  margin-left: 15px;
+.rendered .stats ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.rendered .stats ul li {
+  margin-right: 15px;
+  display: inline-block;
+}
+.rendered .stats ul li span {
   font-weight: bold;
 }
 
