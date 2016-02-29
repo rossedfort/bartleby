@@ -220,10 +220,12 @@ nav input {
 
 .markdown textarea {
   background-color: rgb(40, 45, 50);
+  font-size: 16px;
+  font-family: monospace;
   outline: none;
-  color: #fff;
+  color: #eee;
   width: 95%;
-  height: 100vh;
+  height: 200vh;
   padding: 20px;
   border: none;
 }

@@ -7,10 +7,14 @@ export default Ember.Controller.extend({
     return moment(date).format('LL');
   }),
 
-
   actions: {
     saveNote() {
       this.get('model').save();
+      Ember.$('.rendered').toggleClass('half');
+      Ember.$('.markdown').toggle();
+    },
+
+    toggleEdit() {
       Ember.$('.rendered').toggleClass('half');
       Ember.$('.markdown').toggle();
     }

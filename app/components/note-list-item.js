@@ -2,8 +2,8 @@ import Ember from 'ember';
 const shell = requireNode('electron').shell;
 
 export default Ember.Component.extend({
-  truncatedNoteName: Ember.computed('note.id', function(){
-    return this.get('note.id').length > 15 ? this.get('note.id').slice(0, 15) + '...' : this.get('note.id');
+  truncatedNoteName: Ember.computed('note.id', function() {
+    return this.get('note.id').length > 14 ? this.get('note.id').slice(0, (Math.floor(window.innerWidth * 0.2 / 14))) + '...' : this.get('note.id');
   }),
 
   actions: {
