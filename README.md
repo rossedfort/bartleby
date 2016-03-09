@@ -1,7 +1,8 @@
 # Bartleby
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This README outlines the details of our work on Bartleby, an Ember - Electron
+desktop application for note taking, with built in markdown editing functionality,
+and the ability to publish notes as a Gist.
 
 ## Prerequisites
 
@@ -51,3 +52,12 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+# Usage
+
+![GIF](http://g.recordit.co/ogncfwl34M.gif)
+
+- Users can create, read, edit, and delete notes.
+- Users are also able to login via simple OAuth.
+- Users can live preview the rendered HTML as you write Markdown
+- Users can also publish their notes as a gist linked with their GitHub account
+- All files are saved to the User's filesystem
